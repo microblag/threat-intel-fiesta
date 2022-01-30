@@ -22,5 +22,5 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            target/release/threat-intel-fiesta.exe
-            target/release/threat-intel-fiesta
+            target/x86_64-pc-windows-gnu/release/threat-intel-fiesta.exe
+            target/x86_64-unknown-linux-gnu/release/threat-intel-fiesta
