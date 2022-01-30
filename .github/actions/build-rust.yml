@@ -1,0 +1,25 @@
+name: Build Rust
+description: Builds Rust Project
+
+inputs:
+  target:
+    description: "Target triple"
+    requried: true
+
+runs:
+  using: composite
+  steps:
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+    - run: cargo build --release --all-features
+  - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        target: ${{ inputs.target }}
+        override: true
+      - uses: actions-rs/cargo@v1
+        with:
+          use-cross: true
+          command: build
+          args: --release --target=${{ inputs.target }}
