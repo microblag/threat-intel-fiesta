@@ -1,6 +1,6 @@
 table! {
     credentials (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         user_id -> Integer,
         credential_kind -> Integer,
         value -> Text,
@@ -9,7 +9,7 @@ table! {
 
 table! {
     users (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         user_name -> Text,
     }
 }
