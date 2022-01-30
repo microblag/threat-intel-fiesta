@@ -1,0 +1,6 @@
+- AUTHN
+  - Users
+  - Credentials
+- AUTHZ
+  - Principles
+  - Principle,Action,Target triples

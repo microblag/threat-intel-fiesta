@@ -1,0 +1,5 @@
+CREATE TABLE users
+(
+    id        INTEGER PRIMARY KEY,
+    user_name VARCHAR(64) UNIQUE NOT NULL
+)
