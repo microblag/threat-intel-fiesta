@@ -1,7 +1,7 @@
 use sea_orm::{Database, DatabaseConnection, ActiveModelTrait};
 use sea_orm::ActiveValue::Set;
-use rand::{rngs::StdRng, RngCore, SeedableRng};
-use sha2::Sha256;
+// use rand::{rngs::StdRng, RngCore, SeedableRng};
+// use sha2::Sha256;
 use crate::BoxedError;
 use crate::entities::{credential, user};
 
@@ -39,7 +39,7 @@ pub async fn set_credential<S: AsRef<str>>(credential_kind: CredentialKind, valu
     Ok(())
 }
 
-pub fn make_password_hash<S: AsRef<str>>(password: S) -> Result<String, BoxedError> {
+/*pub fn make_password_hash<S: AsRef<str>>(password: S) -> Result<String, BoxedError> {
     let mut rng = StdRng::from_entropy();
     let mut salt: [u8; 32] = [0u8; 32];
     rng.fill_bytes(&mut salt);
@@ -52,4 +52,4 @@ pub fn make_password_hash<S: AsRef<str>>(password: S) -> Result<String, BoxedErr
     hasher.update(salted_password.as_bytes());
     let result = hasher.finalize();
     Ok("".into())
-}
+}*/

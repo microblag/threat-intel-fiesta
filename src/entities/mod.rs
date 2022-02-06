@@ -4,3 +4,5 @@ pub mod prelude;
 
 pub mod credential;
 pub mod user;
+pub mod object;
+pub mod object_relation;
