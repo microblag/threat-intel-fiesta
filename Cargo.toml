@@ -12,3 +12,4 @@ tokio = { version = "^1.6", features = ["full"] }
 sea-orm = { version = "^0", features = ["sqlx-sqlite", "runtime-tokio-rustls", "macros"], default-features = false }
 sha2 = "0.10.1"
 rand = "0.8.4"
+rocket = "0.5.0-rc.1"
